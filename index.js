@@ -1,16 +1,46 @@
 const LinearRegresion = require("./lib/metode/linear-regresion/LinearRegresion");
+const SingleMovingAverage = require("./lib/metode/single-moving-average/SingleMovingAverage");
 
-// varaibel x adalah rata rata suhu
-var x = [
-  24, 22, 21, 20, 22, 19, 20, 23, 24, 25, 21, 20, 20, 19, 25, 27, 28, 25, 26,
-  24, 27, 23, 24, 23, 22, 21, 26, 25, 26, 27,
-];
-// variabel y adalah jumlah cacat
-var y = [
-  10, 5, 6, 3, 6, 4, 5, 9, 11, 13, 7, 4, 6, 3, 12, 13, 16, 12, 14, 12, 16, 9,
-  13, 11, 7, 5, 12, 11, 13, 14,
+
+data = [
+  { bulan: "januari", tahun: 2018, penjualan: 89 },
+  { bulan: "februari", tahun: 2018, penjualan: 95 },
+  { bulan: "maret", tahun: 2018, penjualan: 85 },
+  { bulan: "april", tahun: 2018, penjualan: 75 },
+  { bulan: "mei", tahun: 2018, penjualan: 86 },
+  { bulan: "juni", tahun: 2018, penjualan: 100 },
+  { bulan: "juli", tahun: 2018, penjualan: 120 },
+  { bulan: "agustus", tahun: 2018, penjualan: 95 },
+  { bulan: "september", tahun: 2018, penjualan: 80 },
+  { bulan: "oktober", tahun: 2018, penjualan: 92 },
+  { bulan: "november", tahun: 2018, penjualan: 92 },
+  { bulan: "desember", tahun: 2018, penjualan: 88 },
+  { bulan: "januari", tahun: 2018, penjualan: 90 },
+  { bulan: "februari", tahun: 2018, penjualan: 95 },
+  { bulan: "maret", tahun: 2018, penjualan: 100 },
+  { bulan: "april", tahun: 2018, penjualan: 102 },
+  { bulan: "mei", tahun: 2018, penjualan: 100 },
+  { bulan: "juni", tahun: 2018, penjualan: 104 },
 ];
 
-let metode = new LinearRegresion();
-console.log(metode.LinearRegresion_x(x, y, 30));
-console.log(metode.LinearRegresion_y(x, y, 4));
+let metode = new SingleMovingAverage;
+
+// metode.normalisasi(data)
+
+var obj = {
+  1: 5,
+  2: 7,
+  3: 0,
+  4: 0,
+  5: 0,
+  6: 0,
+  7: 0,
+  8: 0,
+  9: 0,
+  10: 0,
+  11: 0,
+  12: 0,
+};
+var result = Object.keys(obj).map((key) => [Number(key), obj[key]]);
+
+console.log(result);
