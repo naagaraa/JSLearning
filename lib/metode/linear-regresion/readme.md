@@ -1,3 +1,7 @@
+# linear regresion javascript
+
+## basic usage
+```js
 const LinearRegresion = require("./lib/metode/linear-regresion/LinearRegresion");
 
 // varaibel x adalah rata rata suhu
@@ -14,3 +18,5 @@ var y = [
 let metode = new LinearRegresion();
 console.log(metode.LinearRegresion_x(x, y, 30));
 console.log(metode.LinearRegresion_y(x, y, 4));
+
+```
